@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');//Для получения
                                           // форм из запроса
 const htmlPdf = require('html-pdf');//Do tworzenia pliku pdf
 const fs = require('fs');
-const datePyament = require('./src/assets/js/dateFormatterPayment')
+const dateFormatter = require('./src/assets/js/dateFormatter')
 const factura = require('./src/app/model/faktura')
 const product = require('./src/app/model/product')
 const app = express();// tworzymy Aplikację Express//
@@ -64,7 +64,8 @@ app.post('/post-app', (req, res) => {
         // hello:'super',
 
         layout: false,
-        // datePyament1: datePyament,
+        maxDatePayment:dateFormatter.addDaysToDateReturnDateAsString(7,new Date(f.dateBuy1)),
+
         numer: f.numer,
         adress: f.adress,
         kodPocztowy1: f.kodPocztowy,
