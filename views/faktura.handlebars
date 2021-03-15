@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+<body style="border:solid 2px blue;padding:20px 50px; font-family: sans-serif;
+            display:block;clear:both;font-size:12px;">
+
+<div style=" border:dotted 2px black;width:100%; height:auto;
+     text-align:right;">
+    {{>seller}}
+</div>
+<div style=" margin-top:20px;border:dotted 2px black;width:100%;float:left;">
+    {{>dateNumberDocument}}
+</div>
+<div style="border:dotted 2px black;text-align: center;clear:both;width:100%;
+           margin-top: 20px;float:left; ">
+    <h1 style="letter-spacing: 6px;">FAKTURA VAT</h1>
+</div>
+
+<div style="line-height:50%;margin:20px 0;border:dotted 2px black;font-size:1.2em;width:30%;
+            padding-left:10px;float:left;">
+    {{>buyer}}
+
+</div>
+<div style="line-height:50%;padding-left:55px;margin-top:20px ;border:dotted 2px black;font-size:1.2em;
+            float:left;margin-left:220px;">
+    {{>recipient}}
+</div>
+<div style="clear:both;"></div>
+
+<table border=2 cellspacing="0" style=" width:100%;margin:5px 5px;">
+
+    <tr style="font-size:20px; text-align: center;">
+        <th>Lp.</th>
+        <th>Nazwa towaru/usługi</th>
+        <th>PKMIU</th>
+        <th>ilość</th>
+        <th>j.m.</th>
+        <th>Cena netto</th>
+        <th>VAT</th>
+        <th>Wartość netto</th>
+    </tr>
+
+    <tr style="font-size:12px;width:100%; text-align: center;">
+        <td>1</td>
+        <td>{{{productName1}}}</td>
+        <td></td>
+        <td> {{{quantity}}}</td>
+        <td>szt</td>
+        <td> {{{cost1}}}</td>
+        <td>23%</td>
+        <td>{{{wartoscNetto}}}</td>
+    </tr>
+
+
+    <tr style="font-size:12px; text-align: center;font-weight: bold;">
+        <td colspan="4"></td>
+        <td>VAT</td>
+        <td>Wartość netto</td>
+        <td>Kwota netto</td>
+        <td>Wartość brutto</td>
+    </tr>
+
+    <tr style="text-align: center;">
+        <td colspan="3"></td>
+        <td>W tym:</td>
+        <td>23%</td>
+        <td>{{{wartoscNetto}}}</td>
+        <td>{{{kwotaNetto}}}</td>
+        <td>{{{wartoscBrutto}}}</td>
+    </tr>
+
+    <tr style="text-align: center;">
+        <td colspan="3"></td>
+        <td>Suma:</td>
+        <td></td>
+        <td>{{{wartoscNetto}}}</td>
+        <td>{{{kwotaNetto}}}</td>
+        <td>{{{wartoscBrutto}}}</td>
+    </tr>
+
+    <tr style="font-size:15px;font-weight: bold;text-align:  center;">
+        <td colspan="5"></td>
+        <td>Razem do zapłaty:</td>
+        <td style="text-align:right;">{{{wartoscBrutto}}}</td>
+        <td style="text-align:left;">Pln</td>
+    </tr>
+
+
+    <tr style="font-size:15px;font-weight: bold;text-align:  center;">
+        <td colspan="4"></td>
+        <td colspan="2">Pozostaje do zapłaty:</td>
+        <td style="text-align:right;">{{{wartoscBrutto}}}</td>
+        <td style="text-align:left;">Pln</td>
+    </tr>
+    <tr>
+        <td colspan="5" style="font-size:1.2em;">Forma platności:<span style="font-weight: bold">przelew</span></td>
+        <td style="font-size:1.2em;">Termin platności:</td>
+        <td>do</td>
+        <td>{{{dateBuy}}}+10</td>
+    </tr>
+
+</table>
+
+
+</body>
+</html>

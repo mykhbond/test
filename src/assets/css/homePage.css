@@ -1,0 +1,114 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    border: 1px solid #a77;
+    margin: 30px;
+    /*padding: 30px;*/
+
+}
+
+a.button {
+    font-size: 20px;
+    border: 1px solid #eee;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: red;
+}
+
+ul {
+    padding-left: 20px;
+    /*type:disk;*/
+}
+
+.kontener {
+    /*height: 200vh;*/
+    /*padding-right: 20px;*/
+    /*background-color: antiquewhite;*/
+}
+
+.ekran1 {
+    height: 160vh;
+    background-color: #ccc;
+    /*background-image: https://www.zastavok.net/main/textures/1481497934.jpg*/
+}
+
+.ekran1-button {
+    /*font-size: 50px;*/
+    /*border: 1px solid green;*/
+}
+
+.ekran2 {
+    height: 100vh;
+}
+
+.ekran21 {
+    height: 50vh;
+}
+
+.ekran22-footer {
+    background-color: chartreuse;
+    height: 50vh;
+    text-align: center;
+}
+
+.footer {
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: bolder;
+    letter-spacing: 5px;
+}
+
+#formFactura {
+    font-size: 25px;
+    letter-spacing: 2px;
+    padding-left: 15px;
+    height: auto;
+}
+
+#formPrzeniesc {
+    font-size: 30px;
+    color: firebrick;
+    margin-left: 200px;
+}
+
+.formFaktura {
+    background-color: darkkhaki;
+    width: 500px;
+    margin-left: 20px;
+}
+
+#nip {
+    margin-left: 80px;
+}
+
+#region, #adress {
+    margin-left: 145px;
+
+
+}
+
+#kodPocztowy, #dateBuy {
+    margin-left: 57px;
+}
+#idProduktu{
+    margin-left: 80px;
+}
+#nazwaProduktu{
+    margin-left: 200px;
+}
+#wartoscProduktu{
+    margin-left: 5px;
+}
+#iloscProduktu{
+    margin-left: 155px;
+}
+#VAT{
+    margin-left: 100px;
+}
